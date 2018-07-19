@@ -1,7 +1,6 @@
 # aurelia-content-size-attribute
 
 [![TravisCI](https://travis-ci.com/questmetrics/aurelia-content-size-attribute.svg?branch=master)](https://travis-ci.com/questmetrics/aurelia-content-size-attribute)
-[![Coverage Status](https://coveralls.io/repos/github/questmetrics/aurelia-content-size-attribute/badge.svg?branch=master)](https://coveralls.io/github/questmetrics/aurelia-content-size-attribute?branch=master)
 
 A custom attribute for managing common element size observation and changes notification
 
@@ -73,7 +72,7 @@ A custom attribute for managing common element size observation and changes noti
   </template>
   ```
 
-  By default, the binding direction is one way out, which means only the custom attribute will notify the view model it resides in. (And the other direction doesn't make sense).
+  By default, the binding direction is `from-view`, which means only the custom attribute will notify the view model it resides in. (And the other direction doesn't make sense).
 
 ## Problem & solution
 
