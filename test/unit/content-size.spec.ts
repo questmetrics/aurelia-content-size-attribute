@@ -1,10 +1,11 @@
-import { AppViewModel, AppItem, wait } from './utilities';
+import { AppViewModel, wait } from './utilities';
 import { configure, ContentSize } from '../../src';
 import { configure as configureTemplatingBinding } from 'aurelia-templating-binding';
 import { configure as configureTemplatingResources } from 'aurelia-templating-resources';
 import { StageComponent, ComponentTester } from 'aurelia-testing';
-import { Aurelia, TaskQueue } from 'aurelia-framework';
+import { Aurelia } from 'aurelia-framework';
 import { WebpackLoader } from 'aurelia-loader-webpack';
+import ResizeObserver from 'resize-observer-polyfill';
 
 // Important: Before assertion in each tech, there needs to be a small waiting time
 // for browser to finialize layouting / painting / rendering
@@ -25,7 +26,7 @@ describe('[content-size]', () => {
         .use
         .plugin(configureTemplatingBinding)
         .plugin(configureTemplatingResources)
-        .plugin(configure);
+        .plugin(configure, { resizeObserver: ResizeObserver });
   });
 
   afterAll(() => {
