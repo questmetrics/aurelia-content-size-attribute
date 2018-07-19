@@ -12,7 +12,7 @@ export async function configure(au: Aurelia): Promise<void> {
 
   au
     .use
-    .feature(PLATFORM.moduleName('resources/index'))
+    .feature(PLATFORM.moduleName('resources/index'));
   // .plugin();
 
   await au.start();
