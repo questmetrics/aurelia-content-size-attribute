@@ -76,7 +76,10 @@ export default (config: IKarmaConfig): void => {
     customLaunchers: {
       ChromeDebugging: {
         base: 'Chrome',
-        flags: ['--remote-debugging-port=9333'],
+        flags: [
+          '--disable-gpu',
+          '--remote-debugging-port=9333'
+        ],
         debug: true
       }
     }

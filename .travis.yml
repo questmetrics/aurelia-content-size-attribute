@@ -15,6 +15,10 @@ branches:
 
 cache: yarn
 
+before_install:
+  - # start your web application and listen on `localhost`
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9333 http://localhost &
+
 matrix:
   fast_finish: true
 
