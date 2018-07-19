@@ -1,0 +1,25 @@
+language: node_js
+
+sudo: true
+
+node_js:
+  - '8'
+  - '10'
+
+branches:
+  only:
+  - master
+
+cache: yarn
+
+matrix:
+  fast_finish: true
+
+install:
+  - npm install
+
+notifications:
+  email: true
+
+script:
+  - npm run test
